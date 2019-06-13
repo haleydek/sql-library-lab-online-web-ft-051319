@@ -26,8 +26,8 @@ def select_name_and_series_subgenres_of_authors
   #authors.name
   #series.subgenre_id = subgenres.id
   #subgenres.name
-  "SELECT authors.name
-  FROM authors
+  "SELECT authors.name, subgenres.name
+  FROM authors, subgenres
   LEFT OUTER JOIN series
   ON (authors.id = series.author_id);"
 end
